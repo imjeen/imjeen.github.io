@@ -1,25 +1,30 @@
 import React from "react";
-import logo from "./logo.svg";
-import "@/styles.module.less";
+import { Router, Route, HashRouter } from "react-router-dom";
+import  "@/styles.module.less";
+
+import Layout from "@/components/Layout";
+import HomePage from "@/containers/Home";
+import NotFound from "@/containers/Other/NotFound";
+
+import { createBrowserHistory } from "history";
+const history = createBrowserHistory();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router history={history}>
+      {/* <HashRouter> */}
+        <Layout>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/404">
+            <NotFound />
+          </Route>
+        </Layout>
+      {/* </HashRouter> */}
+      </Router>
+    </>
   );
 }
 
