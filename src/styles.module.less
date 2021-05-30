@@ -5,18 +5,37 @@
 @themeAccent: #303030;
 // @themeDarkBorder: darken(@background, 3%);
 
-:global {
-  body.theme-dark {
-    // color: var(--color);
-    // background-color: var(--background-color);
-    background-color: @themeBackground;
-    color: @themeForeground;
+:root {
+  --text-color: #b3b9c5;
+  --link-color: #81a5f8;
+  --background-color: #202020;
+}
 
-    .theme-header {
-      background-color: @themeBackground;
-      color: @themeForeground;
-      a {
-        color: #798499;
+:global {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body.theme-dark {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    a[href^="http"] {
+      color: var(--link-color);
+      border-bottom: none;
+      background: transparent;
+      &:hover {
+        color: var(--link-color);
+        background: none;
+        border-bottom: 2px solid var(--link-color);
+      }
+    }
+
+    a[href^="/"] {
+      color: var(--dark-text-color);
+      &:hover {
+        color: var(--dark-text-color);
+        background: none;
       }
     }
   }

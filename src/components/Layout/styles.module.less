@@ -2,12 +2,20 @@
   width: 100%;
   background-color: #fff;
   font-size: 15px;
-  // TODO
-  position: sticky;
-  //   position: fixed;
+  position: sticky; //  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+
+  &.dark {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    .menu a:hover {
+      background: rgba(var(--background-color), 0.2);
+      color: rgba(var(--text-color), 0.2);
+    }
+  }
+
   .section {
     max-width: 850px;
     width: 100%;

@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContent } from "@/themeContext";
+
 import ThemeIcon from "./ThemeIcon";
 
 import styles from "./styles.module.less";
-
 import logo from "@/assets/images/floppy.png";
 
 export default function LayoutHeader() {
+  const [{ dark }] = useContext(ThemeContent);
+
   return (
-    <header className={[styles.header, 'theme-header'].join(' ')}>
+    <header className={[styles.header, dark ? styles.dark : ""].join(" ")}>
       <section className={styles.section}>
         <Link className={styles.logo} to="/">
-          <img src={logo} />
-          <span className="logo-text"></span>
+          <img src={logo} alt="LOGO" />
+          <span className="logo-text">PJ</span>
         </Link>
 
         <menu className={styles.menu}>
