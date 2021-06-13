@@ -33,11 +33,12 @@ export default function ThemeIcon() {
     return () => {
       window.matchMedia("(prefers-color-scheme: dark)").removeListener(handler);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <img onClick={onToggle} src={dark ? sun : moon} width="100%" />
+      <img onClick={onToggle} src={dark ? sun : moon} width="100%" alt="" />
     </>
   );
 }

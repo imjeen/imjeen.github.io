@@ -1,10 +1,7 @@
 import React, { useState, createContext, ReactNode } from "react";
 
 const defaultTheme = {
-  dark:
-    typeof window !== "undefined" &&
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches,
+  dark: true, // typeof window !== "undefined" && window.matchMedia &&  window.matchMedia("(prefers-color-scheme: dark)").matches,
 };
 
 // 类型

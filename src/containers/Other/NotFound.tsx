@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function NotFound() {
-  return <> 404</>;
+  return (
+    <>
+      <section className="ui-section">404</section>
+    </>
+  );
 }

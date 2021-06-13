@@ -23,19 +23,26 @@ export default function Home() {
             >
               open source
             </a>{" "}
-            projects and writing about modern JavaScript, Node.js, and
-            development.
+            projects and writing about modern JavaScript / Typescript, Node.js, and Flutter.
           </p>
         </div>
         <div className={["theme-card", styles.card].join(" ")}>
-          <img src="https://via.placeholder.com/150" alt="SELFIRE" />
-          <h3>Email Newsletter</h3>
+          <img
+            src="https://avatars.githubusercontent.com/u/4100582"
+            alt="SELFIE"
+          />
+          <h3>PJ.ONE</h3>
           <p>
-            I write tutorials. Get an update when something new comes out by
-            signing up below!
+            I sometimes push the codes. Get an update when something new comes out by
+            following me below!
           </p>
-          <a className={styles.button} href="#">
-            Subscribe
+          <a
+            className={styles.button}
+            href="https://github.com/imjeen"
+            target="_blank"
+            rel="noreferrer" 
+          >
+            Github
           </a>
         </div>
       </main>
