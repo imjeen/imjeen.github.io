@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 16px;
   font-size: 16px;
   // margin: 2rem 0;
   padding: 15px;
@@ -81,18 +81,33 @@
   }
 }
 
+.notions,
 .latest {
   margin-top: 60px;
-  margin-bottom: 60px;
-  .nav {
+  margin-bottom: 50px;
+  nav {
     display: grid;
-    grid-template-columns: 2fr auto;
     align-items: center;
-    padding: 8px 10px;
+    padding: 6px 10px;
     margin: 0 -10px;
     border: 2px solid transparent;
+    &.nav {
+      grid-template-columns: 1fr 60px;
+    }
     h3 {
       margin: 0;
+
+      line-height: 1.5;
+      overflow: hidden;
+      word-wrap: break-word;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+    }
+    strong {
+      text-align: right;
     }
   }
 }

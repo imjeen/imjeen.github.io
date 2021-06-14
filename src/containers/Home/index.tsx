@@ -28,8 +28,33 @@ const LISTS = [
     repo: "https://github.com/imjeen/gl",
     demo: "https://imjeen.github.io/gl/",
   },
-  
-  
+];
+
+const NOTIONS = [
+  {
+    url: "https://www.notion.so/Certificates-for-localhost-64f4cc03767a45b0a1088a20772d8da4",
+    title: "Certificates for localhost",
+  },
+  {
+    url: "https://www.notion.so/7250645aa4bd4a89bf182611ef036b35",
+    title: "模块化、命名空间与组件化",
+  },
+  {
+    url: "https://www.notion.so/Git-102c8241af224b1e9eaaa1eb05323830",
+    title: "Git 提交规范与自动化",
+  },
+  {
+    url: "https://www.notion.so/Promise-Generator-async-await-735d0ee1d50444228fa43ca27fb965b1",
+    title: "Promise, Generator 和 async/await",
+  },
+  {
+    url: "https://www.notion.so/Docker-CI-CD-15b4c52bb25d440692548247132e31f6",
+    title: "使用 Docker 构建 CI/CD",
+  },
+  // {
+  //   url: "",
+  //   title: "",
+  // },
 ];
 
 export default function Home() {
@@ -41,7 +66,7 @@ export default function Home() {
           " "
         )}
       >
-        <section className={styles.elevator}>
+        <aside className={styles.elevator}>
           <h1>Hey, I'm PJ. </h1>
           <p>
             I'm a full stack software developer creating{" "}
@@ -55,8 +80,8 @@ export default function Home() {
             projects and writing about modern JavaScript / Typescript, Node.js,
             and Flutter.
           </p>
-        </section>
-        <section className={["theme-card", styles.card].join(" ")}>
+        </aside>
+        <header className={["theme-card", styles.card].join(" ")}>
           <img
             src="https://avatars.githubusercontent.com/u/4100582"
             alt="SELFIE"
@@ -74,13 +99,13 @@ export default function Home() {
           >
             Github
           </a>
-        </section>
+        </header>
+
         <section className={styles.latest}>
           <h2>Latest Open Source</h2>
-
-          {LISTS.map(({ emoji, title, repo, demo }) => (
+          {LISTS.map(({ emoji, title, repo, demo }, index) => (
             <>
-              <nav className={styles.nav}>
+              <nav className={styles.nav} key={index.toString()}>
                 <h3>
                   {emoji}
                   <a href={repo} target="_blank" rel="noreferrer">
@@ -97,6 +122,23 @@ export default function Home() {
                     Demo
                   </a>
                 </strong>
+              </nav>
+            </>
+          ))}
+        </section>
+
+        <section className={styles.notions}>
+          <h2>Articles</h2>
+
+          {NOTIONS.map(({ url, title }, index) => (
+            <>
+              <nav key={index.toString()}>
+                <h3>
+                  <a href={url} target="_blank" rel="noreferrer">
+                    {title}
+                  </a>
+                </h3>
+                <strong className={styles.new}></strong>
               </nav>
             </>
           ))}
