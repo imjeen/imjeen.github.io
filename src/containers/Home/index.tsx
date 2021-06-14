@@ -69,7 +69,7 @@ export default function Home() {
         <aside className={styles.elevator}>
           <h1>Hey, I'm PJ. </h1>
           <p>
-            I'm a full stack software developer creating{" "}
+            I'm a beginner of the full stack software developer creating{" "}
             <a
               href="https://github.com/imjeen"
               target="_blank"

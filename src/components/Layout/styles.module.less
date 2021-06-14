@@ -1,8 +1,11 @@
+.holder {
+  min-height: 160px;
+}
 .header {
   width: 100%;
   background-color: #fff;
   font-size: 15px;
-  position: sticky; //  position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -17,6 +20,10 @@
   }
 
   &.scrolled {
+    &.dark {
+      background: #131313;
+      border-color: #131313;
+    }
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
     .section {
       height: 60px;
@@ -37,7 +44,7 @@
     height: 160px;
     padding: 0 20px;
 
-    transition: height 0.2s ease;
+    transition: height 0.3s ease;
 
     padding: 0 30px;
     display: flex;
