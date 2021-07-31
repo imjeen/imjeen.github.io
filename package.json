@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build && cd ./build && cp index.html 404.html && cd -",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "deploy": "yarn build && cd ./build && cp index.html 404.html && cd - && gh-pages -d build"
