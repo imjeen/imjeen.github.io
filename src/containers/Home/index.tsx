@@ -28,6 +28,12 @@ const LISTS = [
     repo: "https://github.com/imjeen/gl",
     demo: "https://imjeen.github.io/gl/",
   },
+  {
+    emoji: "🦚",
+    title: "imjeen/flutter_uikit",
+    repo: "https://github.com/imjeen/flutter_uikit",
+    demo: "https://imjeen.github.io/flutter_uikit/",
+  },
 ];
 
 const NOTIONS = [
